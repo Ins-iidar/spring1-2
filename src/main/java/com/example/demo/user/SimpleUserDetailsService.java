@@ -1,4 +1,4 @@
-import com.example.demo.repository.UserRepository;
+import src.main.java.com.example.demo.repository.UserRepository;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;

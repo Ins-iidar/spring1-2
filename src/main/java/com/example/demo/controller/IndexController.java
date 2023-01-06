@@ -1,5 +1,5 @@
-import com.example.demo.entity.User;
-import com.example.demo.service.AccountService;
+import src.main.java.com.example.demo.entity.User;
+import src.main.java.com.example.demo.service.AccountService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
