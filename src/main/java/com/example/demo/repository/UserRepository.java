@@ -1,3 +1,4 @@
+package src.main.java.com.example.demo.repository;
 import src.main.java.com.example.demo.entity.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 

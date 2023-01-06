@@ -1,3 +1,5 @@
+package src.main.java.com.example.demo.user;
+
 import src.main.java.com.example.demo.entity.User;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.security.core.GrantedAuthority;
