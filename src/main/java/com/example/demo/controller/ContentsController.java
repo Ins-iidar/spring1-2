@@ -1,7 +1,6 @@
 import src.main.java.com.example.demo.user.SimpleLoginUser;
 import src.main.java.com.example.demo.entity.User;
 import com.example.demo.service.ContentsService;
-import src.main.java.com.example.demo.controller.SignupForm;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
