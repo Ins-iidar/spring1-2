@@ -6,7 +6,9 @@ plugins {
 
 group = 'com.example'
 version = '0.0.1-SNAPSHOT'
-sourceCompatibility = '13'
+sourceCompatibility = '14'
+targetCompatibility = '14'
+archivesBaseName = 'demo'
 
 configurations {
     developmentOnly
@@ -36,5 +38,11 @@ dependencies {
 }
 
 bootJar {
+    enabled = false
+    archiveFileName = "${archivesBaseName}.jar"
     launchScript()
+}
+
+jar {
+    enabled = true
 }

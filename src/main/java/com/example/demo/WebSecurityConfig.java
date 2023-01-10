@@ -1,3 +1,5 @@
+package com.example.demo;
+
 import org.springframework.context.annotation.Bean;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.builders.WebSecurity;
@@ -21,7 +23,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     web
       .debug(false)
       .ignoring()
-      .antMatchers("/images/**", "/js/**", "/css/**")
+      .antMatchers("/js/**", "/css/**")
     ;
     // @formatter:on
   }
@@ -32,8 +34,8 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     http
       .authorizeRequests()
         .mvcMatchers("/", "/signup").permitAll()
-        .mvcMatchers("/members/user/**").hasRole("USER")
-        .mvcMatchers("/members/admin/**").hasRole("ADMIN")
+        .mvcMatchers("/members/user/**", "/images/user/**").hasRole("USER")
+        .mvcMatchers("/members/admin/**", "/images/admin/**").hasRole("ADMIN")
         .anyRequest().authenticated()
       .and()
       .formLogin()
@@ -44,6 +46,9 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
         .deleteCookies("JSESSIONID")
         .logoutSuccessUrl("/")
     ;
+    // for /h2-console
+    http.csrf().disable();
+    http.headers().frameOptions().disable();
     // @formatter:on
   }
 }
