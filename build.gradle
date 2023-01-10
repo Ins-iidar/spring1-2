@@ -46,3 +46,7 @@ bootJar {
 jar {
     enabled = true
 }
+
+springBoot {
+  mainClassName = 'com.example.demo.Application'
+}
